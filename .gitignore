@@ -1,0 +1,22 @@
+*.epoch
+*.log
+*.log.zip
+**/*.lck
+.settings
+.project
+.classpath
+
+*.orig
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.iml
+# file folder#
+.idea/
+target/
+bin/
+.svn/
+
