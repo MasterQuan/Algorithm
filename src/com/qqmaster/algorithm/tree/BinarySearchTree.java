@@ -1,4 +1,4 @@
-package com.algorithm.tree;
+package com.qqmaster.algorithm.tree;
 
 /**
  * 二叉搜索树(BST)实现

@@ -1,4 +1,4 @@
-package com.algorithm.leetCode.twoSum;
+package com.qqmaster.algorithm.arithmetic;
 
 /**
  * Given nums = [2, 7, 11, 15], target = 9,
@@ -7,7 +7,7 @@ package com.algorithm.leetCode.twoSum;
  * 
  * @author zhaoshiquan
  */
-public class Solution {
+public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
     	int length = nums.length;
     	if(length<2)

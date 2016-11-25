@@ -1,4 +1,4 @@
-package com.algorithm.sort;
+package com.qqmaster.algorithm.sort;
 
 public class SortTest {
 	public static void main(String[] args) {

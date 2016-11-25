@@ -1,11 +1,11 @@
-package com.algorithm.lostInteger;
+package com.qqmaster.algorithm.arithmetic;
 
 /**
  * 99个不同的整数，对应1-100之间，少一个数，给出这个数
  * @author zhaoshiquan
  *
  */
-public class LostInt {
+public class LostNumber {
 	private final int NUMS = 100;
 	
 	/**
@@ -60,6 +60,4 @@ public class LostInt {
 		num = num ^ NUMS^(NUMS-1);
 		return num;
 	}
-	
-	
 }

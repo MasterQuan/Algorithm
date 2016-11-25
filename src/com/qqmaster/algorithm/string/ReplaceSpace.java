@@ -1,6 +1,9 @@
-package com.algorithm.string;
+package com.qqmaster.algorithm.string;
 
-//将字符串中所有的" "替换成"20%"
+/**
+ * 将字符串中所有的" "替换成"20%"
+ * @author zhaoshiquan
+ */
 public class ReplaceSpace {
 	public static String replaceSpace(String str) {
 		if(str == null || str.length()<1)

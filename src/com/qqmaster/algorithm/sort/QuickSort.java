@@ -1,4 +1,4 @@
-package com.algorithm.sort;
+package com.qqmaster.algorithm.sort;
 
 public class QuickSort {
 	public void quickSort(int[] input){

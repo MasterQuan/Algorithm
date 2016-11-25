@@ -1,4 +1,4 @@
-package com.algorithm.linkedList;
+package com.qqmaster.algorithm.linkedList;
 
 public class LinkedList {
 	

@@ -1,4 +1,4 @@
-package com.algorithm.bit;
+package com.qqmaster.algorithm.bit;
 
 //求一个数的二进制表示中1的个数
 public class NumOfBit1 {

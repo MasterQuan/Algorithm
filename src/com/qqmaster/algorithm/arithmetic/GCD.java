@@ -1,4 +1,4 @@
-package com.algorithm.gcd;
+package com.qqmaster.algorithm.arithmetic;
 
 public class GCD {
 	public static void main(String[] args) {

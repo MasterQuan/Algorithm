@@ -1,5 +1,9 @@
-package com.algorithm.string;
+package com.qqmaster.algorithm.string;
 
+/**
+ * 找出一个字符串中第一个出现不重复字符，没有输出'#'
+ * @author zhaoshiquan
+ */
 public class FirstAppearOnce {
 
 	public static char getFirstAppearOnce(String str){

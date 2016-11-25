@@ -1,10 +1,8 @@
-package com.algorithm.tree;
+package com.qqmaster.algorithm.tree;
 
 public class BSTtest {
-	
 	public static void main(String[] args) {
 		BinarySearchTree bst = new BinarySearchTree();
-		
 		bst.insert(5);
 		bst.insert(6);
 		bst.insert(2);

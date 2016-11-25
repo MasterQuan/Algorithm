@@ -1,4 +1,4 @@
-package com.algorithm.bit;
+package com.qqmaster.algorithm.bit;
 
 //判断一个数是不是2的N次方
 public class PowerOf2 {
