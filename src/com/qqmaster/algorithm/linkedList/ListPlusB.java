@@ -6,15 +6,36 @@ package com.qqmaster.algorithm.linkedList;
  */
 public class ListPlusB {
 	public ListNode plusAB(ListNode a, ListNode b) {
-		if(a == null)
-			return b;
-		if(b == null)
-			return a;
-
 		int temp = 0;
-		ListNode sum = null;
-
-
-		return null;
+		return plusAB(a, b, temp);
+	}
+	private ListNode plusAB(ListNode a, ListNode b, int temp){
+		if(a == null){
+			if(temp == 0)
+				return b;
+			if(b == null){
+				return new ListNode(temp);
+			}
+			int sum = b.val + temp;
+			ListNode result = new ListNode(sum%10);
+			temp = sum/10;
+			result.next = plusAB(a, b.next, temp);
+			return result;
+		}else{
+			if(b == null){
+				if(temp == 0)
+					return a;
+				int sum = a.val + temp;
+				ListNode result = new ListNode(sum%10);
+				temp = sum/10;
+				result.next = plusAB(a.next, b, temp);
+				return result;
+			}
+			int sum = a.val + temp + b.val;
+			ListNode result = new ListNode(sum%10);
+			temp = sum/10;
+			result.next = plusAB(a.next, b.next, temp);
+			return result;
+		}
 	}
 }
