@@ -17,8 +17,8 @@ public class ListPlusB {
 				return new ListNode(temp);
 			}
 			int sum = b.val + temp;
-			ListNode result = new ListNode(sum%10);
-			temp = sum/10;
+			ListNode result = new ListNode(sum>9?(sum-10):sum);
+			temp = sum>=10?1:0;
 			result.next = plusAB(a, b.next, temp);
 			return result;
 		}else{
@@ -26,14 +26,14 @@ public class ListPlusB {
 				if(temp == 0)
 					return a;
 				int sum = a.val + temp;
-				ListNode result = new ListNode(sum%10);
-				temp = sum/10;
+				ListNode result = new ListNode(sum>9?(sum-10):sum);
+				temp = sum>9?1:0;
 				result.next = plusAB(a.next, b, temp);
 				return result;
 			}
 			int sum = a.val + temp + b.val;
-			ListNode result = new ListNode(sum%10);
-			temp = sum/10;
+			ListNode result = new ListNode(sum>9?(sum-10):sum);
+			temp = sum>9?1:0;
 			result.next = plusAB(a.next, b.next, temp);
 			return result;
 		}
