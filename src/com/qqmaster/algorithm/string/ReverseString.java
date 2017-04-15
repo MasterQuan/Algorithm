@@ -1,6 +1,10 @@
 package com.qqmaster.algorithm.string;
 
 public class ReverseString {
+	
+	public static void main(String[] args) {
+		System.out.println("-->" + reverseString2("abcdefg" ,2));
+	}
 
 	/**
 	 * Write a function that takes a string as input 
@@ -8,7 +12,7 @@ public class ReverseString {
 	 * @param s
 	 * @return
 	 */
-	public String reverseString1(String s) {
+	public static String reverseString1(String s) {
 		return reverse(s);
 	}
 
@@ -23,12 +27,20 @@ public class ReverseString {
 	 * @param s
 	 * @return
 	 */
-	public String reverseString2(String s, int index) {
-		if(s == null || s.length() <= 1 || index <=1){
+	public  static String reverseString2(String s, int k) {
+		int len = 0;
+		if(s == null || (len = s.length()) <= 1 || k <=1){
 			return s;
 		}
-
-		return null;
+		
+		if(len <= (k<<1)){
+			return reverseSub(s,k);
+		}
+		
+		StringBuilder sb = new StringBuilder();
+		sb.append(reverseSub(s.substring(0, k<<1),k)).append(reverseString2(s.substring(k<<1),k));
+		
+		return sb.toString();
 	}
 
 	/**
@@ -38,7 +50,7 @@ public class ReverseString {
 	 * @param s
 	 * @return
 	 */
-	public String reverseString3(String s) {
+	public static String reverseString3(String s) {
 		if(s == null || s.length() <2){
 			return s;
 		}
@@ -50,7 +62,7 @@ public class ReverseString {
 		return sb.substring(0, s.length());
 	}
 
-	private String reverse(String s){
+	private static String reverse(String s){
 
 		if(s == null || s.length() <= 1){
 			return s;
@@ -60,6 +72,14 @@ public class ReverseString {
 		for(int i = len-1; i >=0 ; i--){
 			sb.append(s.charAt(i));
 		}
+		return sb.toString();
+	}
+	
+	private static String reverseSub(String s, int k){
+		if(s == null || s.length()< k)
+			return reverse(s);
+		StringBuilder sb = new StringBuilder(reverse(s.substring(0, k)))
+				.append(s.substring(k));
 		return sb.toString();
 	}
 }
